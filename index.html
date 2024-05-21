@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <title>Rock, Paper, Scissors, Lizard, Spock Game</title>
+  </head>
+  <body>
+    <div class="homepage flex j-center a-center" >
+        <div class="title flex a-center j-center jersey-10-regular blurit">
+            <h1>ROCK PAPER SCISSORS LIZARD SPOCK</h1>
+        </div>
+        <div class="images j-center a-center blurit">   
+            <div class="hand_image">
+                 <img src="./images/rock.png" alt="hand-rock">
+            </div>
+            <div class="hand_image">
+                <img src="./images/paper.png" alt="hand-paper">
+            </div>
+            <div class="hand_image">
+                <img src="./images/scissors.png" alt="hand-scissors">
+            </div>
+            <div class="hand_image">
+                <img src="./images/lizard.png" alt="lizard">
+            </div>
+            <div class="hand_image">
+                <img src="./images/spock.png" alt="hand-spock">
+            </div>
+        </div>
+        <div class="rules_modal jersey-10-regular" id="rules_modal">
+            <p>The winner is determined by the following outcomes :</p>
+                <ul>
+                  <li>Scissors cuts Paper</li>
+                  <li>Paper covers Rock</li>
+                  <li>Rock crushes Lizard</li>
+                  <li>Lizard poisons Spock</li>
+                  <li>Spock smashes Scissors</li>
+                  <li>Scissors decapitates Lizard</li>
+                  <li>Lizard eats Paper</li>
+                  <li>Paper disproves Spock</li>
+                  <li>Spock vaporizes Rock</li>
+                  <li>Rock crushes Scissors</li>
+                </ul>
+                <p>Best out of 3 rounds wins. GOOD LUCK!
+                </p>
+            <button class="close_button"  onclick="closeRulesModal()">CLOSE</button>
+        </div>
+        <div class="flex a-center j-center home_page_buttons jersey-10-regular blurit">
+            <a href="rpsls-game.html"><button type="button" class="play_game_button a-center j-center">PLAY</button></a>
+            <button onclick="openRulesModal()" class="open_modal_button flex a-center j-center">RULES</button>
+        </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

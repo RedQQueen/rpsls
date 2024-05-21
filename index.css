@@ -1,0 +1,283 @@
+* {
+  background-color: rgba(64, 233, 245, 0.7);
+  box-sizing: border-box;
+}
+
+body {
+  max-height: 100vh;
+  max-width: 100vw;
+  margin: 0;
+}
+
+/* CSS Styling */
+/* Main Page CSS */
+
+.homepage {
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  height: 40%;
+  width: 100%;
+  border: 0.5rem dotted black;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 3rem;
+  word-spacing: 1rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.images {
+  margin-top: 10px;
+  height: 85%;
+  width: 100%;
+  display: table;
+}
+
+.hand_image {
+  vertical-align: middle;
+  padding: 0.2rem;
+  display: table-cell;
+}
+
+.hand_image img {
+  border: 5px solid black;
+  border-radius: 50%;
+  max-width: 100%;
+}
+
+.home_page_buttons {
+  width: 100%;
+  height: 25%;
+  gap: 3rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+button {
+  border: 10px solid black;
+  height: 6rem;
+  width: 15rem;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+}
+
+/* RULES MODAL */
+
+.rules_modal {
+  padding: 0;
+  margin: 0;
+  display: none;
+  border: 0.5rem dotted black;
+  z-index: 1;
+  position: absolute;
+  font-size: 2rem;
+  height: 70%;
+  width: 70%;
+  text-align: center;
+}
+
+.rules_modal > *,
+li {
+  background-color: transparent;
+}
+
+li {
+  padding: 0;
+  line-height: 2rem;
+  list-style-type: none;
+}
+
+.rules_modal > button {
+  position: relative;
+  top: -0.5rem;
+  left: 1rem;
+  width: 26%;
+  background-color: rgba(64, 233, 245);
+}
+
+/* GAME OVER MODAL */
+.game_over_modal {
+  padding: 0;
+  display: none;
+  border: 0.5rem dotted black;
+  z-index: 1;
+  position: absolute;
+  height: 70%;
+  width: 60%;
+  font-size: 6.5rem;
+  text-align: center;
+  vertical-align: center;
+  color: red;
+}
+
+/* RPSLS CSS */
+/* PLAYER ONE (LEFT SIDE), PLAYER TWO / ROBOT (RIGHT SIDE) */
+
+.rpsls_box {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  gap: 1rem;
+}
+
+.rpsls_player_one,
+.rpsls_robot {
+  border: 5px solid black;
+  flex-direction: column;
+  height: 100%;
+  width: 17%;
+  position: relative;
+  right: -0.2rem;
+}
+
+.player_one_title,
+.robot_title {
+  position: relative;
+  top: -3rem;
+  font-size: 3rem;
+  background-color: transparent;
+}
+
+.player_one_wins,
+.robot_wins {
+  position: relative;
+  background-color: transparent;
+  top: -11rem;
+  left: -2rem;
+  font-size: 4rem;
+}
+
+.player_one_number_of_wins,
+.robot_number_of_wins {
+  position: relative;
+  background-color: transparent;
+  top: -23.3rem;
+  right: -4rem;
+  font-size: 4rem;
+}
+
+.rpsls_player_one_images,
+.rpsls_robot_images {
+  gap: 0.2rem;
+  position: relative;
+  top: -27rem;
+  flex-direction: column;
+}
+
+.rpsls_player_one_images > img,
+.rpsls_robot_images > img {
+  height: 8rem;
+  width: 8rem;
+  border: 3px solid black;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.rpsls_buttons {
+  position: absolute;
+  bottom: 1rem;
+  gap: 3rem;
+}
+
+/* GAME FIELD (MIDDLE BOX) */
+.game_field {
+  border: 5px dotted black;
+  height: 90%;
+  width: 70%;
+  padding: 0;
+  margin: 0;
+  top: 40px;
+  gap: 3rem;
+}
+
+.outcomes_container {
+  height: 50%;
+  width: 90%;
+  gap: 4rem;
+  position: relative;
+  right: -1rem;
+  top: -8rem;
+}
+
+.player_one_outcome,
+.player_robot_outcome {
+  height: 23rem;
+  width: 23rem;
+}
+
+.player_one_outcome > img,
+.player_robot_outcome > img {
+  height: 100%;
+}
+
+.result {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border: 2px dotted black;
+  height: 25%;
+  width: 64%;
+  bottom: 40px;
+  font-size: 90px;
+  text-align: center;
+}
+
+.hand1,
+button {
+  cursor: pointer;
+}
+
+/* UTILITIES */
+
+.flex {
+  display: flex;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.jersey-10-regular,
+button,
+p {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgba(64, 233, 245);
+}
+
+.pointer {
+  cursor: pointer;
+}
+/* ANIMATION */
+
+.flash {
+  animation: flashy 0.25s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+}
+
+@keyframes flashy {
+  50% {
+    opacity: 0;
+  }
+}

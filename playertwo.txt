@@ -1,0 +1,53 @@
+//RPSLS-GAME 
+
+    <div class="choose_the_opponent flex">
+          <p class="friend_opponent">WANT TO PLAY WITH A FRIEND?  
+            <p class="click_here pointer" onclick="playingAgainstFriend()">CLICK HERE</p></p>
+          <p class="robot_opponent hidden">WANT TO PLAY WITH A ROBOT? 
+            <p class="click_here pointer hidden" onclick="playingAgainstRobot()">CLICK HERE</p></p>
+  </div>
+
+
+//INDEX.JS 
+
+function playingAgainstFriend() {
+  friend_opponent.classList.add("hidden");
+  friend_opponent.nextElementSibling.classList.add("hidden");
+
+  robot_opponent.classList.remove("hidden");
+  robot_opponent.nextElementSibling.classList.remove("hidden");
+
+  robot_box.classList.remove("flex");
+  robot_box.classList.add("hidden");
+
+  player_two_box.classList.add("flex");
+  player_two_box.classList.remove("hidden");
+
+  player_one_number_of_wins.innerHTML = "0";
+  second_player_number_of_wins.innerHTML = "0";
+  restartGame();
+}
+
+function playingAgainstRobot() {
+  robot_opponent.classList.add("hidden");
+  robot_opponent.nextElementSibling.classList.add("hidden");
+
+  friend_opponent.classList.remove("hidden");
+  friend_opponent.nextElementSibling.classList.remove("hidden");
+
+  player_two_box.classList.remove("flex");
+  player_two_box.classList.add("hidden");
+
+  robot_box.classList.add("flex");
+  robot_box.classList.remove("hidden");
+
+  player_one_number_of_wins.innerHTML = "0";
+  second_player_number_of_wins.innerHTML = "0";
+  restartGame();
+}
+
+  if (player_two_box.classList.contains("flex")) {
+        settingPlayerTwo();
+      } else if (robot_box.classList.contains("flex")) {
+        settingRobot();
+      }

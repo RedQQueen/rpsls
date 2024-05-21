@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta class="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="rpsls_box flex j-center a-center">
+      <div class="game_over_modal jersey-10-regular a-center j-center" id="game_over_modal"></div>
+      <div class="rpsls_player_one flex a-center blurit">
+        <p class="player_one_title">PLAYER ONE</p>
+        <p class="player_one_wins">WINS</p>
+        <p class="player_one_number_of_wins">0</p>
+        <div class="rpsls_player_one_images flex blurit">
+          <img src="./images/rock.png" alt="rock" class="rock hand1" />
+          <img src="./images/paper.png" alt="paper" class="paper hand1" />
+          <img
+            src="./images/scissors.png"
+            alt="scissors"
+            class="scissors hand1"
+          />
+          <img src="./images/lizard.png" alt="lizard" class="lizard hand1" />
+          <img src="./images/spock.png" alt="spock" class="spock hand1" />
+        </div>
+      </div>
+      <div class="game_field flex j-center a-center blurit">
+        <div id="outcomes" class="outcomes_container flex j-center a-center">
+          <div class="player_one_outcome"></div>
+          <div class="robot_outcome"></div>
+        </div>
+      </div>
+      <p class="result blurit"></p>
+      <div class="rpsls_robot flex a-center blurit">
+          <p class="robot_title">ROBOT</p>
+        <p class="robot_wins">WINS</p>
+        <p class="robot_number_of_wins">0</p>
+        <div class="rpsls_robot_images flex blurit">
+          <img src="./images/rock.png" alt="rock" class="rock hand2" />
+          <img src="./images/paper.png" alt="paper" class="paper hand2" />
+          <img
+            src="./images/scissors.png"
+            alt="scissors"
+            class="scissors hand2"
+          />
+          <img src="./images/lizard.png" alt="lizard" class="lizard hand2" />
+          <img src="./images/spock.png" alt="spock" class="spock hand2" />
+        </div>
+      </div>
+      <div class="rpsls_buttons flex a-center j-center jersey-10-regular">
+        <a href="index.html"><button>HOME</button></a>
+        <button onclick="restartGame()">RESTART</button>
+      </div>
+    </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
